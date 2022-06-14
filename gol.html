@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link href="gol.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <header><img src="logo.png">Game of life</header>
+    <div id='canvas'></div>
+    <div class="button">
+        <button type="button" id="start"class="btn btn-primary">Start</button>
+        <button type="button" id="reset"class="btn btn-primary">Reset</button>
+        <button type="button" id="mode"class="btn btn-primary">Dark mode</button>
+        <div class="slidecontainer"><span>Speed Controller</span>
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            <span>Speed<output id="demo">50</output>%</span>
+        </div>
+        <button type="button" id="random" class="btn btn-primary">Random</button>
+    </div>
+  <div class="row r1">
+    <div class="dropdown col-6">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="survival" data-bs-toggle="dropdown" aria-expanded="false">
+            survival
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item s1">1</a></li>
+          <li><a class="dropdown-item s2">2</a></li>
+          <li><a class="dropdown-item s3">3</a></li>
+        </ul>
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="reproduction" data-bs-toggle="dropdown" aria-expanded="false">
+            reproduction
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item r1">1</a></li>
+            <li><a class="dropdown-item r2">2</a></li>
+            <li><a class="dropdown-item r3">3</a></li>
+          </ul>
+    </div>
+    <div class="col-6">
+      <button class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Dragged Colour</button>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Pattern selecter</button>
+    </div>
+    <div class="row col-6 r1">
+      <div class="col" style="min-height: 120px;">
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+          <div class="card card-body">
+            <button type="button" id="blue"class="btn btn-primary">blue</button>
+            <button type="button" id="green"class="btn btn-primary">green</button>
+            <button type="button" id="red"class="btn btn-primary">red</button>
+            <button type="button" id="yellow"class="btn btn-primary">yellow</button>
+            <button type="button" id="purple"class="btn btn-primary">purple</button>
+            <button type="button" id="pink"class="btn btn-primary">pink</button>            
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample2">
+          <div class="card card-body">
+            <img id="p1" width="50" hegith="50" src="boat.png">
+            <img id="p2" width="50" hegith="50" src="bread.png">
+            <img id="p3" width="50" hegith="50" src="tub.png">
+            <img id="p4" width="50" hegith="50" src="gilder.gif">
+            <img id="p5" width="50" hegith="50" src="copperhead.png">
+            <img id="p6" width="150" hegith="50" src="Gosperglidergun.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+<script src="gol.js"></script>
+</body>
+</html>

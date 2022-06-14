@@ -1,0 +1,15 @@
+span.condensed-line {
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    line-height: 14.65px;
+    font-stretch: ultra-condensed;
+}
+
+span.colorHex {
+    cursor: pointer;
+}
+
+span.colorHex.color-selected {
+    -webkit-text-stroke: 1.15px black !important;
+}
